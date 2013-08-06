@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @pin.name
+%p
+  %b Lat:
+  = @pin.lat
+%p
+  %b Lng:
+  = @pin.lng
+%p
+  %b Acc:
+  = @pin.acc
+
+= link_to 'Edit', edit_pin_path(@pin)
+\|
+= link_to 'Back', pins_path

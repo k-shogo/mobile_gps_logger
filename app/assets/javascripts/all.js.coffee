@@ -1,0 +1,7 @@
+#= require 'jquery'
+#= require 'jquery_ujs'
+#= require 'skel-config'
+#= require 'skel.min.js'
+#= require 'skel-panels.min.js'
+#= require 'iphone_gps'
+#= require 'link_replace'

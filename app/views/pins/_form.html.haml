@@ -1,0 +1,25 @@
+= form_for @pin, html: {id: "pin_form"} do |f|
+  - if @pin.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@pin.errors.count, "error")} prohibited this pin from being saved:"
+      %ul
+        - @pin.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :lat
+    = f.text_field :lat
+  .field
+    = f.label :lng
+    = f.text_field :lng
+  .field
+    = f.label :acc
+    = f.number_field :acc
+  -# .actions
+    -# = f.submit 'Save'
+  .actions
+    #submit.clickable
+      submit on js

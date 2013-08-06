@@ -1,0 +1,39 @@
+!!!
+%html{lang: "ja"}
+  %head
+    %title GPS Test App
+    %link{rel: "stylesheet", href: "http://www.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css"}
+    -# ホーム画面に追加する際のアイコン指定
+    %link{rel: "apple-touch-icon", href: image_path("apple-touch-icon.png")}
+    -# ホームのiconから起動したときにフルスクリーンに
+    %meta{name: "apple-mobile-web-app-capable", content: "yes"}
+    =javascript_include_tag "all"
+    %noscript
+      = stylesheet_link_tag "skel-noscript.css", "style"
+    = csrf_meta_tags
+  %body
+    .container
+      #header
+        %h1#title GPS App
+      .row
+        %section#left-sidebar.4u
+          %section
+            %h2 Left Sidebar
+            %p
+              Lorem ipsum dolor sit amet sed magna etiam elit.
+              lorem elit nec fringilla urna sed tempor in. Cras et sodales
+              consectetur viverra lorem.
+          %section
+            %h2 Heading
+            %p
+              Lorem ipsum dolor sit amet sed magna etiam elit.
+              lorem elit nec fringilla urna sed tempor in. Cras et sodales
+              consectetur viverra lorem.
+          %section
+            %h2 Heading
+            %p
+              Lorem ipsum dolor sit amet sed magna etiam elit.
+              lorem elit nec fringilla urna sed tempor in. Cras et sodales
+              consectetur viverra lorem.
+        %section#content.8u
+          = yield
