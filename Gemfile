@@ -23,6 +23,13 @@ gem 'compass-rails'
 
 gem 'geocoder'
 
+gem 'sidekiq'
+
+# sidekiq web
+gem 'slim', '>= 1.1.0'
+# if you require 'sinatra' you get the DSL extended to Object
+gem 'sinatra', '>= 1.3.0', :require => nil
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

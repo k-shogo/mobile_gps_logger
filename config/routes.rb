@@ -1,5 +1,11 @@
 MobileGpsLogger::Application.routes.draw do
+  require 'sidekiq/web'
+
   resources :pins
+
+  root to: "pins#new"
+
+  mount Sidekiq::Web => '/sidekiq'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -41,7 +47,7 @@ MobileGpsLogger::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

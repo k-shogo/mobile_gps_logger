@@ -28,6 +28,7 @@ class PinsController < ApplicationController
 
     respond_to do |format|
       if @pin.save
+        ReverseGeocodingWorker.perform_async(@pin.id)
         format.html { redirect_to @pin, notice: 'Pin was successfully created.' }
         format.json { render action: 'show', status: :created, location: @pin }
       else
