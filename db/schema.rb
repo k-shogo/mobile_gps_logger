@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20130805142212) do
 
   create_table "pins", force: true do |t|
     t.string   "name"
+    t.string   "address"
     t.decimal  "lat",        precision: 20, scale: 15
     t.decimal  "lng",        precision: 20, scale: 15
     t.integer  "acc"

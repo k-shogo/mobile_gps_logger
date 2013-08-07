@@ -3,6 +3,11 @@
 %p
   %b Name:
   = @pin.name
+
+%p
+  %b Address:
+  = @pin.address
+
 %p
   %b Lat:
   = @pin.lat
@@ -12,6 +17,8 @@
 %p
   %b Acc:
   = @pin.acc
+%p
+  = image_tag "http://maps.google.com/maps/api/staticmap?size=600x400&sensor=false&zoom=16&markers=#{@pin.lat}%2C#{@pin.lng}"
 
 = link_to 'Edit', edit_pin_path(@pin)
 \|

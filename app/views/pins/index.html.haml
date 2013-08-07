@@ -3,9 +3,7 @@
 %table
   %tr
     %th Name
-    %th Lat
-    %th Lng
-    %th Acc
+    %th Address
     %th
     %th
     %th
@@ -13,9 +11,7 @@
   - @pins.each do |pin|
     %tr
       %td= pin.name
-      %td= pin.lat
-      %td= pin.lng
-      %td= pin.acc
+      %td= pin.address
       %td= link_to 'Show', pin
       %td= link_to 'Edit', edit_pin_path(pin)
       %td= link_to 'Destroy', pin,
