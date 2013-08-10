@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20130805142212) do
     t.string   "address"
     t.decimal  "lat",        precision: 20, scale: 15
     t.decimal  "lng",        precision: 20, scale: 15
-    t.integer  "acc"
+    t.float    "acc"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

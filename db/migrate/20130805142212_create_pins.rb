@@ -5,7 +5,7 @@ class CreatePins < ActiveRecord::Migration
       t.string :address
       t.decimal :lat, precision: 20, scale: 15
       t.decimal :lng, precision: 20, scale: 15
-      t.integer :acc
+      t.float :acc
 
       t.timestamps
     end
