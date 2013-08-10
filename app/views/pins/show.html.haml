@@ -10,15 +10,15 @@
 
 %p
   %b Lat:
-  = @pin.lat
+  = @pin.latitude
 %p
   %b Lng:
-  = @pin.lng
+  = @pin.longitude
 %p
   %b Acc:
-  = @pin.acc
+  = @pin.accuracy
 %p
-  = image_tag "http://maps.google.com/maps/api/staticmap?size=600x400&sensor=false&zoom=16&markers=#{@pin.lat}%2C#{@pin.lng}"
+  = image_tag @pin.static_map_url
 
 = link_to 'Edit', edit_pin_path(@pin)
 \|

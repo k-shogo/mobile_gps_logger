@@ -10,16 +10,26 @@
     = f.label :name
     = f.text_field :name
   .field
-    = f.label :lat
-    = f.text_field :lat
+    = f.label :latitude
+    = f.text_field :latitude
   .field
-    = f.label :lng
-    = f.text_field :lng
+    = f.label :longitude
+    = f.text_field :longitude
   .field
-    = f.label :acc
-    = f.number_field :acc
-  -# .actions
-    -# = f.submit 'Save'
+    = f.label :accuracy
+    = f.number_field :accuracy
+  .field
+    = f.label :altitude
+    = f.number_field :altitude
+  .field
+    = f.label :altitude_accuracy
+    = f.number_field :altitude_accuracy
+  .field
+    = f.label :heading
+    = f.number_field :heading
+  .field
+    = f.label :speed
+    = f.number_field :speed
   .actions
     -# #submit.clickable
       submit on js

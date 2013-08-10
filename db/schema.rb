@@ -16,9 +16,13 @@ ActiveRecord::Schema.define(version: 20130805142212) do
   create_table "pins", force: true do |t|
     t.string   "name"
     t.string   "address"
-    t.decimal  "lat",        precision: 20, scale: 15
-    t.decimal  "lng",        precision: 20, scale: 15
-    t.float    "acc"
+    t.decimal  "latitude",          precision: 20, scale: 15
+    t.decimal  "longitude",         precision: 20, scale: 15
+    t.float    "accuracy"
+    t.float    "altitude"
+    t.float    "altitude_accuracy"
+    t.float    "heading"
+    t.float    "speed"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
