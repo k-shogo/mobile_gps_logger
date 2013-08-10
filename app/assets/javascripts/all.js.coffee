@@ -3,5 +3,8 @@
 #= require 'skel-config'
 #= require 'skel.min.js'
 #= require 'skel-panels.min.js'
+#= require 'spin.min.js'
+#= require 'ladda.min.js'
+#= require 'ladda-config'
 #= require 'iphone_gps'
 #= require 'link_replace'
