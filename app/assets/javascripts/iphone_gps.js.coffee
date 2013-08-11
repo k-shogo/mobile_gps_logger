@@ -13,7 +13,7 @@ set_gps = ->
     errorCallback,
     {
       enableHighAccuracy: true,
-      timeout: 5000,
+      timeout: 2000,
       maximumAge: 0
     }
   )
@@ -41,11 +41,11 @@ successCallback = (position) ->
 errorCallback = (error) ->
   result = ""
   switch error.code
-    when 1
+    when event.PERMISSION_DENIED
       result = "位置情報の取得が許可されていません"
-    when 2
+    when event.POSITION_UNAVAILABLE
       result = "位置情報の取得に失敗しました"
-    when 3
+    when event.TIMEOUT
       result = "タイムアウトしました"
   alert result
 
