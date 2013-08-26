@@ -1,11 +1,13 @@
-# window.onload = ->
 $ ->
   $("#submit").on "click", (event) ->
-    watchID = set_gps()
-    setTimeout (->
-      navigator.geolocation.clearWatch watchID
-      $("#pin_form").submit()
-    ), 3000
+    navigator.geolocation.getCurrentPosition(observation, errorCallback)
+
+observation = ->
+  watchID = set_gps()
+  setTimeout (->
+    navigator.geolocation.clearWatch watchID
+    $("#pin_form").submit()
+  ), 3000
 
 set_gps = ->
   watchID = navigator.geolocation.watchPosition(
@@ -13,7 +15,7 @@ set_gps = ->
     errorCallback,
     {
       enableHighAccuracy: true,
-      timeout: 2000,
+      timeout: 5000,
       maximumAge: 0
     }
   )
