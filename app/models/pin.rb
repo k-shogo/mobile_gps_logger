@@ -6,13 +6,13 @@ class Pin < ActiveRecord::Base
   # after_validation :reverse_geocode
 
   # マッピング設定
-  tire do
+  # tire do
     mapping do
       indexes :name, analyzer: :kuromoji
       indexes :address, analyzer: :kuromoji
       indexes :location, type: :geo_point, lat_lon: true
     end
-  end
+    # end
 
   # インデキシング用json出力
   def to_indexed_json
@@ -28,7 +28,7 @@ class Pin < ActiveRecord::Base
   end
 
   def self.search(params)
-    tire.search(load: true) do
+    tire.search(load: true, page: (params[:page] || 1)) do
       query {
         string "name:#{params[:search]} address:#{params[:search]}"
       } if params[:search].present?

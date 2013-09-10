@@ -5,7 +5,7 @@ class PinsController < ApplicationController
   # GET /pins.json
   def index
     # @pins = Pin.all
-    @pins = Pin.search params
+    @pins = Pin.search(params)
   end
 
   # GET /pins/1

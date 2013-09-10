@@ -27,6 +27,10 @@ gem 'sidekiq'
 
 gem 'tire'
 
+gem 'smarter_csv'
+
+gem 'kaminari'
+
 # sidekiq web
 gem 'slim', '>= 1.1.0'
 # if you require 'sinatra' you get the DSL extended to Object
