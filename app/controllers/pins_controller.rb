@@ -4,7 +4,8 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.all
+    # @pins = Pin.all
+    @pins = Pin.search params
   end
 
   # GET /pins/1
@@ -29,6 +30,7 @@ class PinsController < ApplicationController
     respond_to do |format|
       if @pin.save
         ReverseGeocodingWorker.perform_async(@pin.id)
+        # ReverseGeocodingWorker.perform_at(3.minute.since, @pin.id)
         format.html { redirect_to @pin, notice: 'Pin was successfully created.' }
         format.json { render action: 'show', status: :created, location: @pin }
       else

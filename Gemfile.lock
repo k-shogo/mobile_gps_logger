@@ -25,8 +25,9 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
+    ansi (1.4.3)
     arel (4.0.0)
-    atomic (1.1.12)
+    atomic (1.1.13)
     builder (3.1.4)
     celluloid (0.14.1)
       timers (>= 1.0.0)
@@ -46,8 +47,7 @@ GEM
       compass (>= 0.12.2, < 0.14)
     connection_pool (1.1.0)
     erubis (2.7.0)
-    execjs (1.4.0)
-      multi_json (~> 1.0)
+    execjs (2.0.1)
     fssm (0.2.10)
     geocoder (1.1.8)
     haml (4.0.3)
@@ -57,9 +57,10 @@ GEM
       activesupport (>= 3.1, < 4.1)
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
+    hashr (0.0.22)
     hike (1.2.3)
-    i18n (0.6.4)
-    jbuilder (1.5.0)
+    i18n (0.6.5)
+    jbuilder (1.5.1)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
     jquery-rails (3.0.4)
@@ -69,12 +70,12 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.23)
+    mime-types (1.24)
     minitest (4.7.5)
-    multi_json (1.7.8)
+    multi_json (1.7.9)
     mysql2 (0.3.13)
     polyglot (0.3.3)
-    puma (2.5.0)
+    puma (2.5.1)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.0)
@@ -100,6 +101,8 @@ GEM
     redis (3.0.4)
     redis-namespace (1.3.1)
       redis (~> 3.0.0)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     sass (3.2.10)
     sass-rails (4.0.0)
       railties (>= 4.0.0.beta, < 5.0)
@@ -108,11 +111,11 @@ GEM
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
-    sidekiq (2.13.0)
+    sidekiq (2.14.0)
       celluloid (>= 0.14.1)
       connection_pool (>= 1.0.0)
       json
-      redis (>= 3.0)
+      redis (>= 3.0.4)
       redis-namespace
     sinatra (1.4.3)
       rack (~> 1.4)
@@ -136,13 +139,21 @@ GEM
       atomic
     tilt (1.4.1)
     timers (1.1.0)
-    treetop (1.4.14)
+    tire (0.6.0)
+      activemodel (>= 3.0)
+      activesupport
+      ansi
+      hashr (~> 0.0.19)
+      multi_json (~> 1.3)
+      rake
+      rest-client (~> 1.6)
+    treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
     turbolinks (1.3.0)
       coffee-rails
     tzinfo (0.3.37)
-    uglifier (2.1.2)
+    uglifier (2.2.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
 
@@ -164,5 +175,6 @@ DEPENDENCIES
   sidekiq
   sinatra (>= 1.3.0)
   slim (>= 1.1.0)
+  tire
   turbolinks
   uglifier (>= 1.3.0)

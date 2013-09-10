@@ -25,6 +25,8 @@ gem 'geocoder'
 
 gem 'sidekiq'
 
+gem 'tire'
+
 # sidekiq web
 gem 'slim', '>= 1.1.0'
 # if you require 'sinatra' you get the DSL extended to Object
